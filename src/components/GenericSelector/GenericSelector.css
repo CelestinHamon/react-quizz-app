@@ -1,0 +1,10 @@
+.generic-select {
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  padding: 0 10px;
+  font-size: 16px;
+  min-width: 350px;
+  cursor: pointer;
+  font-family: inherit;
+}

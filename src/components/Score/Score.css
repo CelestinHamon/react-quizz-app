@@ -1,0 +1,19 @@
+.score-0,
+.score-1 {
+  background-color: #d41f1f;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+.score-2,
+.score-3 {
+  background-color: #fcff3e;
+  padding: 0px 20px;
+}
+
+.score-4,
+.score-5 {
+  background-color: #008321;
+  color: #fff;
+  padding: 0px 20px;
+}
