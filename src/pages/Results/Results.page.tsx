@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import QuestionComponent from "../../components/QuestionComponent/QuestionComponent";
@@ -12,9 +12,9 @@ const Results: React.FC = () => {
   const state = location.state as { questions: Question[] } | undefined;
   const questions = state?.questions;
 
-  const navigateToQuizz = () => {
+  const navigateToQuizz = useCallback(() => {
     navigate("/");
-  };
+  }, [navigate]);
 
   // Avoid navigating to the page through the browser url
   // Check if questions exist, if not navigate to quizz
@@ -22,7 +22,7 @@ const Results: React.FC = () => {
     if (!questions || questions.length === 0) {
       navigateToQuizz();
     }
-  }, [questions]);
+  }, [questions, navigateToQuizz]);
 
   return (
     <>

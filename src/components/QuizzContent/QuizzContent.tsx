@@ -28,6 +28,7 @@ const QuizzContent: React.FC<QuizzProps> = ({ category, difficulty }) => {
         <QuestionComponent
           question={question}
           key={question.question + index}
+          // Using selectAnswer with 'undefined' resets the selected answer for the question
           selectAnswer={(answer?: string) => selectAnswer(question, answer)}
         />
       ))}
